@@ -14,3 +14,6 @@ github_username:  jekyll
 markdown: kramdown
 sass:
       sass_dir: /assets/_sass
+
+gems:
+  - jekyll-compass

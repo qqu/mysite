@@ -3,8 +3,6 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
@@ -46,9 +44,10 @@ $on-laptop:        960px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-				"bootstrap",
+        "bootstrap",
         "base",
         "layout",
         "syntax-highlighting",
         "bourbon/bourbon",
-        "header";
+        "partials/header",
+        "partials/hero";
