@@ -22,6 +22,7 @@
     }
 }
 
+// activated when scroll down
 .site-header-min {
     height: $header-height-min;
     background: rgba(255, 255, 255, 0.9);
@@ -31,13 +32,20 @@
         color:black;
     }
     .site-nav {
+        @media (min-width:$on-palm){
+            .page-link{
+                color:black;
+            }
+        }
         top: 12px;
         line-height: $header-height-min;
+
         .menu-icon {
             .line{
                 background:black;
             }
         }
+
     }
 }
 

@@ -29,9 +29,7 @@
     }
 
     .page-link {
-        color: $text-color;
         line-height: $base-line-height;
-
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
             margin-left: 20px;
@@ -63,26 +61,22 @@
 
                 &.line-1 {
                     top:0;
-
                 }
                 &.line-2 {
                     top:4px;
-
                 }
                 &.line-3 {
                     top:8px;
-
                 }
-
             }
         }
-
+        
         .trigger {
             clear: both;
             display: none;
-            background:rgba(0,0,0, 0.8);
-            border:solid 1px rgba(204, 204, 204, 0.33);
-            border-radius: 3px;
+            border: 1px solid rgba(0, 0, 0, .15);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+            background:rgba(0, 0, 0, .8);
         }
 
         &:hover .trigger {
@@ -92,12 +86,11 @@
         .page-link {
             display: block;
             padding: 10px 10px 10px 30px;
-            color:white;
             &:not(:first-child) {
                 margin-left:0;
             }
             &:hover {
-                background:rgba(40, 40, 40, 0.8);
+                background:(0, 0, 0, .9);
             }
         }
     }
