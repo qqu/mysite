@@ -85,12 +85,12 @@
 
         .page-link {
             display: block;
-            padding: 10px 10px 10px 30px;
+            padding: 10px 20px 10px 30px;
             &:not(:first-child) {
                 margin-left:0;
             }
             &:hover {
-                background:(0, 0, 0, .9);
+                background:rgba(22, 22, 22, .9);
             }
         }
     }
