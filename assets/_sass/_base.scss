@@ -1,3 +1,15 @@
+// variables
+$header-height: 80px;
+$header-height-min: 50px;
+
+
+//font-size
+$xsm: 0.6em;
+$sm: 0.8em;
+$md: 1em;
+$lg: 1.2em;
+$xlg: 1.6em;
+
 /**
  * Reset some basic elements
  */
@@ -154,8 +166,8 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: -webkit-calc(#{$content-width});
+  max-width:         calc(#{$content-width});
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
