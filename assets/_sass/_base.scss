@@ -1,14 +1,60 @@
-// variables
+// Variables and mixins
+
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,700);
+
+// Our variables
+$base-font-family: 'Raleway', Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    1080px;
+
+$on-palm:          640px;
+$on-laptop:        960px;
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
 $header-height: 80px;
 $header-height-min: 50px;
 
-
 //font-size
 $xsm: 0.6em;
-$sm: 0.8em;
+$sm: 0.8;
 $md: 1em;
 $lg: 1.2em;
 $xlg: 1.6em;
+
+//heading
+$heading-lg: 3em;
+$heading-md: 2.4em;
+$heading-sm: 1.6em;
+
+/**
+ * Customized Mixins
+ */
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
 
 /**
  * Reset some basic elements
@@ -16,8 +62,8 @@ $xlg: 1.6em;
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -26,13 +72,13 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  font-weight: 300;
-  color: $text-color;
-  background-color: $background-color;
-  -webkit-text-size-adjust: 100%;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: 300;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
 }
 
 
@@ -44,17 +90,24 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 2;
 }
 
+
+/**
+ * Images
+ */
+section {
+    padding: 60px 0;
+}
 
 
 /**
  * Images
  */
 img {
-  max-width: 100%;
-  vertical-align: middle;
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 
@@ -63,11 +116,11 @@ img {
  * Figures
  */
 figure > img {
-  display: block;
+    display: block;
 }
 
 figcaption {
-  font-size: $small-font-size;
+    font-size: $small-font-size;
 }
 
 
@@ -76,14 +129,14 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: $spacing-unit;
+    margin-left: $spacing-unit;
 }
 
 li {
-  > ul,
-  > ol {
-    margin-bottom: 0;
-  }
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -92,26 +145,73 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+    font-weight: 300;
 }
 
+.section-header{
+    margin-bottom: $spacing-unit*2; 
+    .section-title {
+        &.large {
+            font-weight: 600;
+            font-size: $heading-lg; 
+            position: relative;
+            line-height: 2;
+        }
 
+        &:before {
+            content: "";
+            position: absolute;
+            width: 60%;
+            height: 1px;
+            top: auto;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: 0 auto;
+            background-color: #dfdfdf;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: 10%;
+            height: 3px;
+            top: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0 auto;
+            background-color: orange;
+            @include transition(all 0.3s ease 0s);
+        }
+        &:hover::after {
+            width: 30%;
+        }
+    }
+}
+.section-subtitle {
+    font-size: $heading-sm;
+    font-weight: 300;
+}
+
+.text-center{
+    text-align: center;    
+}
 
 /**
  * Links
  */
 a {
-  color: $brand-color;
-  text-decoration: none;
+    color: $brand-color;
+    text-decoration: none;
 
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
 
-  &:hover {
-    color: $text-color;
-    text-decoration: underline;
-  }
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+    }
 }
 
 
@@ -120,16 +220,16 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
-  font-size: 18px;
-  letter-spacing: -1px;
-  font-style: italic;
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
 
-  > :last-child {
-    margin-bottom: 0;
-  }
+    > :last-child {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -139,25 +239,25 @@ blockquote {
  */
 pre,
 code {
-  font-size: 15px;
-  border: 1px solid $grey-color-light;
-  border-radius: 3px;
-  background-color: #eef;
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
 }
 
 code {
-  padding: 1px 5px;
+    padding: 1px 5px;
 }
 
 pre {
-  padding: 8px 12px;
-  overflow-x: scroll;
+    padding: 8px 12px;
+    overflow-x: scroll;
 
-  > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
 
@@ -166,20 +266,20 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(#{$content-width});
-  max-width:         calc(#{$content-width});
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
-  @extend %clearfix;
+    max-width: -webkit-calc(#{$content-width});
+    max-width:         calc(#{$content-width});
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
 
-  @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-  }
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
 }
 
 
@@ -189,11 +289,11 @@ pre {
  */
 %clearfix {
 
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
 
@@ -203,14 +303,17 @@ pre {
  */
 .icon {
 
-  > svg {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
 
-    path {
-      fill: $grey-color;
+        path {
+            fill: $grey-color;
+        }
     }
-  }
 }
+
+
+
