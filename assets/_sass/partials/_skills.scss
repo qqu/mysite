@@ -1,0 +1,80 @@
+.skill-icon {
+  i {
+    font-size:$xlg;
+    width:60px;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    border-radius:32px;
+    border: 2px solid black;
+  }
+}
+
+.skill-info {
+}
+
+.skill-lv {
+  display: block;
+  position: relative; // For positioning bar pseudo elements
+  width: 100%;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+  }
+  &:before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    background: #eeeeee;
+    border: 1px solid #dcdcdc;
+  }
+  &:after {
+    background-color: $green;
+    background: repeating-linear-gradient(-45deg, $green, $green 10px, lighten($green, 3) 10px, lighten($green, 3) 20px);
+    height: 14px; 
+    top: 3px;
+    right: 95%;
+    bottom: 3px;
+    left: 3px;
+    @include animation(fill 2s both);
+  }
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}):after {
+      @include animation-delay(#{$i * 0.5}s);
+    }
+  }
+  &[aria-label="novice"]:after {
+    right: 75%;
+  }
+  &[aria-label="average"]:after {
+    right: 50%;
+  }
+  &[aria-label="adept"]:after {
+    right: 35%;
+  }
+  &[aria-label="advanced"]:after {
+    right: 20%;
+  }
+  &[aria-label="elite"]:after {
+    right: 10%;
+  }
+  &[aria-label="pro"]:after {
+    right: 2px;
+  }
+  &[aria-label="l33tasuar"]:after {
+    // turn it up to 11!
+    right: -10%;
+  }
+}
+
+@include keyframes(fill) {
+  from {
+        right: 100%;
+  }
+
+}
+
