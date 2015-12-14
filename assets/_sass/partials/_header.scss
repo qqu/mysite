@@ -4,6 +4,7 @@
     height: $header-height;
     top: 0;
     left: 0;
+    z-index: 99999;
     @include transition(all 0.3s ease-in-out);
     @include background(linear-gradient(rgba(22,22,22,0.6), rgba(0, 0, 0, 0)));
     .site-nav {
