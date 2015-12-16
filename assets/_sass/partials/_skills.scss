@@ -1,3 +1,15 @@
+.self-intro {
+  margin-bottom: 15px;
+}
+
+.skills-left, .skills-right {
+    @include animation-duration(0.6s);
+    @include transition(all, 0.3s, ease);
+    .skill {
+       margin: 15px;
+    }
+}
+
 .skill-icon {
   i {
     font-size:$xlg;
