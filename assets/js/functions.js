@@ -17,6 +17,8 @@ $(function(){
             header.removeClass("site-header-min");
         }
     });
+    
+    $("body:not('.front')").find("header").addClass("site-header-min").removeClass("site-header");
 
     //gallery image animation  
     /*

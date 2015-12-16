@@ -1,10 +1,31 @@
 .project-post {
     padding-top: 15px;
     padding-bottom: 15px;
-    .project-info {
+    .project-header {
         position: relative;
+        height: 50px;
         background: #fafafa;
         border: 1px solid #efefef;
+        border-bottom: none;
+        .header-title {
+            float:left;
+            width: 75%;
+            padding: 0 15px;
+            line-height: 50px;
+            font-size: $md;
+            font-weight: 400;
+        }
+
+        .header-type {
+            float:right;
+            width: 25%;
+            padding: 0 15px;
+            text-align: right;
+            line-height: 50px;
+            font-size: $xsm;
+            color: orange;
+        }
+
         &:before, &:after{
             content: '';
             border: 8px solid transparent; // Arbitrary Number

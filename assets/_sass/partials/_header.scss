@@ -27,6 +27,7 @@
 .site-header-min {
     height: $header-height-min;
     background: rgba(255, 255, 255, 0.9);
+    @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.25));
     .site-title {
         line-height: $header-height-min;
         font-size: $lg;
