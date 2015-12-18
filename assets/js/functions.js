@@ -6,7 +6,7 @@
 $(function(){
 
     //header scroll effect  
-    var header = $("header"),
+    var header = $(".front header"),
     yOffset = 0,
     triggerPoint = 150;
     $(window).scroll(function(){

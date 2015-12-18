@@ -90,3 +90,27 @@
     }
 }
 
+//Project page
+.project {
+    padding-top: 100px;
+
+    .project-imgs img{
+        width: 100%;
+    }
+
+    .project-detail {
+        margin-top: $spacing-unit;
+        .project-role {
+            font-size: $lg;
+            font-weight: 400;
+        }
+        ul {
+            li{
+                border-left: 2px solid orange;
+                margin:8px 0;
+                padding:0 10px;
+                color: $grey-color;
+            } 
+        }
+    }
+}
