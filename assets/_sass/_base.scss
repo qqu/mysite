@@ -102,7 +102,7 @@ ul, ol, dl, figure,
 /**
  * Images
  */
-section {
+section[data-type="content"] {
     padding: 45px 0;
 }
 

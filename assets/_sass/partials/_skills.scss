@@ -54,11 +54,11 @@
     right: 95%;
     bottom: 3px;
     left: 3px;
-    @include animation(fill 2s both);
+    @include animation(fill 1.5s both);
   }
   @for $i from 1 through 5 {
     &:nth-child(#{$i}):after {
-      @include animation-delay(#{$i * 0.5}s);
+      @include animation-delay(#{$i * 0.2}s);
     }
   }
   &[aria-label="novice"]:after {

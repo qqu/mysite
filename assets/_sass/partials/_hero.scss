@@ -3,7 +3,9 @@
 
  */
 .hero-content {
-    height: 400px;
-    background: url(https://images.unsplash.com/photo-1437419764061-2473afe69fc2?dpr=2&fit=crop&fm=jpg&h=750&ixjsv=2.0.0&ixlib=rb-0.3.5&q=50&w=1225) no-repeat center center;
+    background: url(https://images.unsplash.com/photo-1437419764061-2473afe69fc2?dpr=2&fit=crop&fm=jpg&h=750&ixjsv=2.0.0&ixlib=rb-0.3.5&q=50&w=1225) no-repeat center center fixed;
     background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100vw;
 }
