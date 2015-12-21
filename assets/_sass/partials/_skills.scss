@@ -58,7 +58,7 @@
   }
   @for $i from 1 through 5 {
     &:nth-child(#{$i}):after {
-      @include animation-delay(#{$i * 0.2}s);
+      @include animation-delay(#{$i * 1.0}s);
     }
   }
   &[aria-label="novice"]:after {

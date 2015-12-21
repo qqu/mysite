@@ -106,6 +106,19 @@ section[data-type="content"] {
     padding: 45px 0;
 }
 
+section[data-type="background"] {
+    padding: 0;
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    &:first-child {
+        background-position: center center;
+        background-size: cover;
+        height: 50vh;
+        width: 100vw;
+    }
+}
+
 
 /**
  * Images
