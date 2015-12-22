@@ -23,14 +23,16 @@ $(function(){
             $('.skills-right').removeClass('invisible').addClass('animated flipInX');
         }
 
+
         $('section[data-type="background"]').each(function() {
             var $bgObj = $(this);
             var distance = $bgObj.offset().top - yOffset;
-            var yPos = -(yOffset / $bgObj.data('speed')) ;
-            var bgP = '50% ' + yPos + 'px';
-
+            var yPos = (yOffset / $bgObj.data('speed')) ;
+            var bgP = '50% ' + (distance - yPos) + 'px';
+                    
             $bgObj.css("background-position", bgP);    
-        }); 
+        });
+ 
     });
 
     $("body:not('.front')").find("header").addClass("site-header-min").removeClass("site-header");

@@ -111,7 +111,7 @@ section[data-type="background"] {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center bottom; 
+    background-position: 50% 50%; 
     &:first-child {
         background-size: cover;
         background-position: 50% 0;
