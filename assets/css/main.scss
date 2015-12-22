@@ -3,11 +3,12 @@
 ---
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "bootstrap",
+        
+        "bourbon/bourbon",
         "base",
+        "bootstrap",
         "layout",
         "syntax-highlighting",
-        "bourbon/bourbon",
         "partials/header",
         "partials/hero",
         "partials/skills",

@@ -109,11 +109,12 @@ section[data-type="content"] {
 section[data-type="background"] {
     padding: 0;
     background-attachment: fixed;
-    background-position: 50% 0;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center bottom; 
     &:first-child {
-        background-position: center center;
         background-size: cover;
+        background-position: 50% 0;
         height: 50vh;
         width: 100vw;
     }
