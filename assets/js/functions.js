@@ -45,8 +45,10 @@ $(function(){
             });
 
             $(window).stellar({
+                responsive: true,
                 horizontalScrolling: false,
-                horizontalOffset: 0
+                horizontalOffset: 0,
+                verticalOffset: 0
             });
 
             scrollNav();

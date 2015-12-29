@@ -1,13 +1,12 @@
 .resume-content {
-    background: url(http://www.lacouncil.org/images/skiing-wallpaper_1280x800.jpg);
-    height: 400px;
+    background: url('http://www.lacouncil.org/images/skiing-wallpaper_1280x800.jpg');
+    height: 40vh;
     width: 100%;
     display: flex;
-      flex-direction: column;
-        justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     button {
         display: block;
         margin: 0 auto;
-      
     }
 }
