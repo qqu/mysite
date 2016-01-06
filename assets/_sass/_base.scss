@@ -333,4 +333,19 @@ pre {
 }
 
 
+/**
+ * Input
+ */
 
+textarea {
+    padding:10px;
+    font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    resize: vertical;
+}
+
+.margin-bottom-sm {
+    margin-bottom: 15px;
+}
