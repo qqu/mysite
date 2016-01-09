@@ -37,7 +37,7 @@ $header-height-min: 50px;
 
 //font-size
 $xsm: 0.6em;
-$sm: 0.8;
+$sm: 0.8em;
 $md: 1em;
 $lg: 1.2em;
 $xlg: 1.6em;
@@ -218,15 +218,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $green;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($green, 15%);
     }
 
     &:hover {
-        color: $text-color;
+        color: darken($green, 15%);
         text-decoration: underline;
     }
 }
