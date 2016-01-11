@@ -1,7 +1,28 @@
 /**
- a Site hero
+a Site hero
 
  */
 .hero-content {
     background: url(https://images.unsplash.com/photo-1437419764061-2473afe69fc2?dpr=2&fit=crop&fm=jpg&h=750&ixjsv=2.0.0&ixlib=rb-0.3.5&q=50&w=1225);
+    position: relative;
+    .hero-slogan {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        .slogan-top {
+            font-size: 1.6em;
+        }
+        .slogan-mid {
+            font-size: 3em;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: $spacing-unit/2 0 $spacing-unit 0;
+        }
+        .slogan-bottom {
+            font-size: 1.2em;
+        }
+    }
 }
