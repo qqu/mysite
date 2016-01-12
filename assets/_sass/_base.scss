@@ -4,14 +4,14 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,700);
 
 // Our variables
-$base-font-family: 'Raleway', Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-family: 'Raleway', Helvetica, Arial, sans-serif;
+$base-font-size:   14px;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.6;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #333333;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
@@ -80,7 +80,7 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: 300;
+    font-weight: 400;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
