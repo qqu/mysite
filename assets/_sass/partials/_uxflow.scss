@@ -1,0 +1,24 @@
+.ux-flow-box {
+    border-radius:2px;
+    padding:$spacing-unit 0;
+    h5 {
+        font-weight: 700;
+        color: $green;
+    }
+    
+    h6 {
+        color: $grey-color;
+    }
+}
+
+.ux-claimer {
+    color: $grey-color;
+    h4 {
+        font-weight: 700;
+        color: $green;
+    }
+
+    p {
+        padding: $spacing-unit/2 0;
+    }
+}
