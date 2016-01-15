@@ -63,8 +63,9 @@ function scrollNav() {
         var theClass = $(this).attr("class");
         $('.'+theClass).parent('a').addClass('active');
         //Animate
+        var anchor =  $(this).prop("hash");
         $('html, body').stop().animate({
-            scrollTop: $( $(this).attr('href')  ).offset().top
+            scrollTop: $(anchor).offset().top
         }, 200);
         return false;
     });
