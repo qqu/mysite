@@ -18,7 +18,7 @@ $(function(){
         }
 
         //front page skills fadein
-        if(yOffset >= 240){
+        if(yOffset >= 200){
             $('.skills-left').removeClass('invisible').addClass('animated flipInX');
             $('.skills-right').removeClass('invisible').addClass('animated flipInX');
         }
