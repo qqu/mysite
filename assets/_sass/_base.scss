@@ -64,14 +64,17 @@ $yellow: #FFBF00;
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
+h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
 }
 
-
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 /**
  * Basic styling
@@ -84,6 +87,7 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    margin: 0 0 300px 0;
 }
 
 
@@ -109,7 +113,7 @@ section[data-type="content"] {
 section[data-type="background"] {
     padding: 0;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover !important;
     background-repeat: no-repeat;
     background-position: 50% 0;
     &:first-child {

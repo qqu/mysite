@@ -4,7 +4,6 @@
 */
 
 $(function(){
-
     var header = $(".front header"),
     yOffset = 0,
     triggerPoint = 150;
@@ -50,7 +49,7 @@ $(function(){
         horizontalOffset: 0,
         verticalOffset: 0
     });
-
+    
     scrollNav();
     typingSlider();
 });
