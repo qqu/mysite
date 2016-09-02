@@ -1,5 +1,5 @@
 .resume-content {
-    background: url('/assets/img/ski.jpg');
+    background: url($baseurl + '/assets/img/ski.jpg');
     height: 40vh;
     width: 100%;
     display: flex;
