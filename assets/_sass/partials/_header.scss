@@ -9,7 +9,7 @@
     @include background(linear-gradient(rgba(22,22,22,0.6), rgba(0, 0, 0, 0)));
     .logo {
         padding: 19px;
-        background: url("/assets/img/logo-white.png") no-repeat center center;
+        background: url($baseurl + '/assets/img/logo-white.png') no-repeat center center;
         background-size: contain;
         margin: 0px 15px 0 0;
     }
@@ -45,7 +45,7 @@
     
     .logo {
         padding: 17px;
-        background: url("/assets/img/logo.png") no-repeat center center;
+        background: url($baseurl + '/assets/img/logo.png') no-repeat center center;
         background-size: contain;
         margin: 0px 15px 0 0;
     }
